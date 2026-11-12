@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>হোটেল বুকিং ডিরেক্টরি - মক্কা</title>
+    <title>মক্কা হোটেল ডিরেক্টরি - ৫০টি হোটেলের তালিকা</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -19,7 +19,7 @@
     <header class="bg-emerald-700 text-white py-6 shadow-md">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-3xl font-bold">মক্কা হোটেল ডিরেক্টরি</h1>
-            <p class="text-emerald-100 mt-1">হারাম শরীফের নিকটবর্তী হোটেলের তালিকা ও দূরত্ব অনুযায়ী ফিল্টার</p>
+            <p class="text-emerald-100 mt-1">হারাম শরীফের নিকটবর্তী ৫০টি হোটেলের তালিকা ও দূরত্ব অনুযায়ী ফিল্টার</p>
         </div>
     </header>
 
@@ -30,10 +30,11 @@
         <div class="bg-white p-4 rounded-xl shadow-sm mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 border border-gray-200">
             <label for="distanceFilter" class="font-semibold text-lg text-gray-700">দূরত্ব অনুযায়ী ফিল্টার করুন:</label>
             <select id="distanceFilter" onchange="filterHotels()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block p-2.5 w-full sm:w-72">
-                <option value="all">সকল দূরত্ব (সব হোটেল)</option>
+                <option value="all">সকল দূরত্ব (৫০টি হোটেল)</option>
                 <option value="150">১৫০ মিটার বা তার কম</option>
                 <option value="300">৩০০ মিটার বা তার কম</option>
                 <option value="500">৫০০ মিটার বা তার কম</option>
+                <option value="1000">১০০০ মিটার বা তার কম</option>
             </select>
         </div>
 
@@ -43,341 +44,1252 @@
             <!-- হোটেল ১ -->
             <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="100">
                 <div>
-                    <div class="relative h-56 bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover">
-                    </div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
                     <div class="p-5">
                         <h2 class="text-xl font-bold text-gray-900 mb-1">আল-হিদায়াহ হোটেল অ্যান্ড স্যুট</h2>
                         <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: আল উতাইবিয়াহ, মক্কা</p>
-                        
-                        <!-- স্পষ্ট দূরত্বের হাইলাইট বক্স -->
                         <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
-                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span>
-                            <span class="text-emerald-700 font-bold">১০০ মিটার</span>
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">১০০ মিটার</span>
                         </div>
-
                         <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
                             <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
                             <p>২ বেড: ২০০ রিয়াল | ৩ বেড: ২৭০ রিয়াল</p>
                             <p>৪ বেড: ৩৫০ রিয়াল | ৫ বেড: ৪৫০ রিয়াল</p>
                         </div>
-
                         <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
-                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span>
-                            <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
                         </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <a href="https://wa.me/966550283243?text=আমি%20আল-হিদায়াহ%20হোটেল%20সম্পর্কে%20জানতে%20চাই" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">
-                        💬 হোয়াটসঅ্যাপে যোগাযোগ
-                    </a>
+                    <a href="https://wa.me/966550283243?text=আমি%20আল-হিদায়াহ%20হোটেল%20সম্পর্কে%20জানতে%20চাই" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
                 </div>
             </div>
 
             <!-- হোটেল ২ -->
             <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="150">
                 <div>
-                    <div class="relative h-56 bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover">
-                    </div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
                     <div class="p-5">
                         <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা টাওয়ার প্যারাডাইস</h2>
                         <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: জাবাল উমর সংলগ্ন, মক্কা</p>
-                        
                         <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
-                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span>
-                            <span class="text-emerald-700 font-bold">১৫০ মিটার</span>
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">১৫০ মিটার</span>
                         </div>
-
                         <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
                             <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
                             <p>২ বেড: ২৫০ রিয়াল | ৩ বেড: ৩২০ রিয়াল</p>
                             <p>৪ বেড: ৪০০ রিয়াল | ৫ বেড: ৫২০ রিয়াল</p>
                         </div>
-
                         <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
-                            <span>🕒 চেক-ইন: দুপুর ৩:০০ টা</span>
-                            <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                            <span>🕒 চেক-ইন: দুপুর ৩:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
                         </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <a href="https://wa.me/966550283243?text=আমি%20মক্কা%20টাওয়ার%20প্যারাডাইস%20সম্পর্কে%20জানতে%20চাই" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">
-                        💬 হোয়াটসঅ্যাপে যোগাযোগ
-                    </a>
+                    <a href="https://wa.me/966550283243?text=আমি%20মক্কা%20টাওয়ার%20প্যারাডাইস" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
                 </div>
             </div>
 
             <!-- হোটেল ৩ -->
             <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="220">
                 <div>
-                    <div class="relative h-56 bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover">
-                    </div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
                     <div class="p-5">
                         <h2 class="text-xl font-bold text-gray-900 mb-1">যমযম গ্র্যান্ড হোটেল</h2>
                         <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: ইব্রাহিম খলিল রোড, মক্কা</p>
-                        
                         <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
-                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span>
-                            <span class="text-emerald-700 font-bold">২২০ মিটার</span>
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">২২০ মিটার</span>
                         </div>
-
                         <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
                             <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
                             <p>২ বেড: ১৮০ রিয়াল | ৩ বেড: ২৪০ রিয়াল</p>
                             <p>৪ বেড: ৩০০ রিয়াল | ৫ বেড: ৩৮০ রিয়াল</p>
                         </div>
-
                         <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
-                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span>
-                            <span>🕛 চেক-আউট: সকাল ১১:০০ টা</span>
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: সকাল ১১:০০ টা</span>
                         </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <a href="https://wa.me/966550283243?text=আমি%20যমযম%20গ্র্যান্ড%20হোটেল%20সম্পর্কে%20জানতে%20চাই" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">
-                        💬 হোয়াটসঅ্যাপে যোগাযোগ
-                    </a>
+                    <a href="https://wa.me/966550283243?text=যমযম%20গ্র্যান্ড%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
                 </div>
             </div>
 
             <!-- হোটেল ৪ -->
             <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="300">
                 <div>
-                    <div class="relative h-56 bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover">
-                    </div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
                     <div class="p-5">
                         <h2 class="text-xl font-bold text-gray-900 mb-1">আল মায়াস রেসিডেন্স</h2>
                         <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: মিসফালাহ স্ট্রিট, মক্কা</p>
-                        
                         <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
-                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span>
-                            <span class="text-emerald-700 font-bold">৩০০ মিটার</span>
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৩০০ মিটার</span>
                         </div>
-
                         <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
                             <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
                             <p>২ বেড: ১৬০ রিয়াল | ৩ বেড: ২১০ রিয়াল</p>
                             <p>৪ বেড: ২৭০ রিয়াল | ৫ বেড: ৩৪০ রিয়াল</p>
                         </div>
-
                         <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
-                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span>
-                            <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
                         </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <a href="https://wa.me/966550283243?text=আমি%20আল%20মায়াস%20রেসিডেন্স%20সম্পর্কে%20জানতে%20চাই" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">
-                        💬 হোয়াটসঅ্যাপে যোগাযোগ
-                    </a>
+                    <a href="https://wa.me/966550283243?text=আল%20মায়াস%20রেসিডেন্স" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
                 </div>
             </div>
 
             <!-- হোটেল ৫ -->
             <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="380">
                 <div>
-                    <div class="relative h-56 bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover">
-                    </div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
                     <div class="p-5">
                         <h2 class="text-xl font-bold text-gray-900 mb-1">ফজর আল বাইত হোটেল</h2>
                         <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: আজিয়াদ স্ট্রিট, মক্কা</p>
-                        
                         <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
-                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span>
-                            <span class="text-emerald-700 font-bold">৩৮০ মিটার</span>
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৩৮০ মিটার</span>
                         </div>
-
                         <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
                             <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
                             <p>২ বেড: ১৪০ রিয়াল | ৩ বেড: ১৯০ রিয়াল</p>
                             <p>৪ বেড: ২৪০ রিয়াল | ৫ বেড: ৩০০ রিয়াল</p>
                         </div>
-
                         <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
-                            <span>🕒 চেক-ইন: দুপুর ১:০০ টা</span>
-                            <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                            <span>🕒 চেক-ইন: দুপুর ১:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
                         </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <a href="https://wa.me/966550283243?text=আমি%20ফজর%20আল%20বাইত%20হোটেল%20সম্পর্কে%20জানতে%20চাই" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">
-                        💬 হোয়াটসঅ্যাপে যোগাযোগ
-                    </a>
+                    <a href="https://wa.me/966550283243?text=ফজর%20আল%20বাইত%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
                 </div>
             </div>
 
             <!-- হোটেল ৬ -->
             <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="450">
                 <div>
-                    <div class="relative h-56 bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover">
-                    </div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
                     <div class="p-5">
                         <h2 class="text-xl font-bold text-gray-900 mb-1">রওজাতুল মক্কা হোটেল</h2>
                         <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: গাজ্জা স্কয়ার, মক্কা</p>
-                        
                         <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
-                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span>
-                            <span class="text-emerald-700 font-bold">৪৫০ মিটার</span>
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৪৫০ মিটার</span>
                         </div>
-
                         <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
                             <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
                             <p>২ বেড: ১৩০ রিয়াল | ৩ বেড: ১৭০ রিয়াল</p>
                             <p>৪ বেড: ২২০ রিয়াল | ৫ বেড: ২৮০ রিয়াল</p>
                         </div>
-
                         <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
-                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span>
-                            <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
                         </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <a href="https://wa.me/966550283243?text=আমি%20রওজাতুল%20মক্কা%20হোটেল%20সম্পর্কে%20জানতে%20চাই" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">
-                        💬 হোয়াটসঅ্যাপে যোগাযোগ
-                    </a>
+                    <a href="https://wa.me/966550283243?text=রওজাতুল%20মক্কা%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
                 </div>
             </div>
 
             <!-- হোটেল ৭ -->
             <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="550">
                 <div>
-                    <div class="relative h-56 bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover">
-                    </div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
                     <div class="p-5">
                         <h2 class="text-xl font-bold text-gray-900 mb-1">দার আল তাওয়াক্কুল</h2>
                         <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: রুহ আল বাখশ, মক্কা</p>
-                        
                         <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
-                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span>
-                            <span class="text-emerald-700 font-bold">৫৫০ মিটার</span>
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৫৫০ মিটার</span>
                         </div>
-
                         <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
                             <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
                             <p>২ বেড: ১২০ রিয়াল | ৩ বেড: ১৬০ রিয়াল</p>
                             <p>৪ বেড: ২০০ রিয়াল | ৫ বেড: ২৫০ রিয়াল</p>
                         </div>
-
                         <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
-                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span>
-                            <span>🕛 চেক-আউট: সকাল ১১:০০ টা</span>
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: সকাল ১১:০০ টা</span>
                         </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <a href="https://wa.me/966550283243?text=আমি%20দার%20আল%20তাওয়াক্কুল%20সম্পর্কে%20জানতে%20চাই" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">
-                        💬 হোয়াটসঅ্যাপে যোগাযোগ
-                    </a>
+                    <a href="https://wa.me/966550283243?text=দার%20আল%20তাওয়াক্কুল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
                 </div>
             </div>
 
             <!-- হোটেল ৮ -->
             <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="650">
                 <div>
-                    <div class="relative h-56 bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover">
-                    </div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
                     <div class="p-5">
                         <h2 class="text-xl font-bold text-gray-900 mb-1">সুবুল আল মদিনা হোটেল</h2>
                         <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: জারওয়াল, মক্কা</p>
-                        
                         <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
-                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span>
-                            <span class="text-emerald-700 font-bold">৬৫০ মিটার</span>
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৬৫০ মিটার</span>
                         </div>
-
                         <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
                             <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
                             <p>২ বেড: ১১০ রিয়াল | ৩ বেড: ১৫০ রিয়াল</p>
                             <p>৪ বেড: ১৯০ রিয়াল | ৫ বেড: ২৪০ রিয়াল</p>
                         </div>
-
                         <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
-                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span>
-                            <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
                         </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <a href="https://wa.me/966550283243?text=সুবুল%20আল%20মদিনা%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">
-                        💬 হোয়াটসঅ্যাপে যোগাযোগ
-                    </a>
+                    <a href="https://wa.me/966550283243?text=সুবুল%20আল%20মদিনা%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
                 </div>
             </div>
 
             <!-- হোটেল ৯ -->
             <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="750">
                 <div>
-                    <div class="relative h-56 bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover">
-                    </div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
                     <div class="p-5">
                         <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা নূর প্লাজা</h2>
                         <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: আল কুদাই, মক্কা</p>
-                        
                         <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
-                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span>
-                            <span class="text-emerald-700 font-bold">৭৫০ মিটার</span>
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৭৫০ মিটার</span>
                         </div>
-
                         <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
                             <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
                             <p>২ বেড: ১০০ রিয়াল | ৩ বেড: ১৩০ রিয়াল</p>
                             <p>৪ বেড: ১৭০ রিয়াল | ৫ বেড: ২১০ রিয়াল</p>
                         </div>
-
                         <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
-                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span>
-                            <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
                         </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <a href="https://wa.me/966550283243?text=মক্কা%20নূর%20প্লাজা" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">
-                        💬 হোয়াটসঅ্যাপে যোগাযোগ
-                    </a>
+                    <a href="https://wa.me/966550283243?text=মক্কা%20নূর%20প্লাজা" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
                 </div>
             </div>
 
             <!-- হোটেল ১০ -->
             <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="900">
                 <div>
-                    <div class="relative h-56 bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover">
-                    </div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
                     <div class="p-5">
                         <h2 class="text-xl font-bold text-gray-900 mb-1">হোটেল আল মানার আল মাক্কী</h2>
                         <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: শূশিয়াহ, মক্কা</p>
-                        
                         <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
-                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span>
-                            <span class="text-emerald-700 font-bold">৯০০ মিটার</span>
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৯০০ মিটার</span>
                         </div>
-
                         <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
                             <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
                             <p>২ বেড: ৯০ রিয়াল | ৩ বেড: ১২০ রিয়াল</p>
                             <p>৪ বেড: ১৫০ রিয়াল | ৫ বেড: ১৯০ রিয়াল</p>
                         </div>
-
                         <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
-                            <span>🕒 চেক-ইন: দুপুর ৩:০০ টা</span>
-                            <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                            <span>🕒 চেক-ইন: দুপুর ৩:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
                         </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <a href="https://wa.me/966550283243?text=হোটেল%20আল%20মানার%20আল%20মাক্কী" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">
-                        💬 হোয়াটসঅ্যাপে যোগাযোগ
-                    </a>
+                    <a href="https://wa.me/966550283243?text=হোটেল%20আল%20মানার%20আল%20মাক্কী" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ১১ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="120">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা প্যালেস ভিউ</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: ইব্রাহিম খলিল রোড, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">১২০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ২২ডি রিয়াল | ৩ বেড: ৩০০ রিয়াল</p>
+                            <p>৪ বেড: ৩৮০ রিয়াল | ৫ বেড: ৪৮০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20প্যালেস%20ভিউ" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py.2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ১২ থেকে ৫০ পর্যন্ত অনুরূপ স্ট্রাকচারে সাজানো -->
+            <!-- হোটেল ১২ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="180">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল খলিল প্লাজা</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: মাসাফালা, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">১৮০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৯০ রিয়াল | ৩ বেড: ২৫০ রিয়াল</p>
+                            <p>৪ বেড: ৩২০ রিয়াল | ৫ বেড: ৪০০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20খলিল%20প্লাজা" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ১৩ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="240">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">সুবাহ আল হারাম</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: জাবাল উমর, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">২৪০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৭০ রিয়াল | ৩ বেড: ২৩০ রিয়াল</p>
+                            <p>৪ বেড: ২৯০ রিয়াল | ৫ বেড: ৩৭০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=সুবাহ%20আল%20হারাম" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ১৪ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="310">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা গ্র্যান্ড ভিউ</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: আজিয়াদ স্ট্রিট, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৩১০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৫৫ রিয়াল | ৩ বেড: ২০৫ রিয়াল</p>
+                            <p>৪ বেড: ২৬০ রিয়াল | ৫ বেড: ৩৩০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20গ্র্যান্ড%20ভিউ" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ১৫ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="390">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল জাওহারা হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: গাজ্জা, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৩৯০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৩৫ রিয়াল | ৩ বেড: ১৮০ রিয়াল</p>
+                            <p>৪ বেড: ২৩৫ রিয়াল | ৫ বেড: ২৯০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20জাওহারা%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ১৬ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="460">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">রিয়াদ আল মক্কা</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: আল উতাইবিয়াহ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৪৬০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১২৫ রিয়াল | ৩ বেড: ১৬৫ রিয়াল</p>
+                            <p>৪ বেড: ২১৫ রিয়াল | ৫ বেড: ২৭০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=রিয়াদ%20আল%20মক্কা" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ১৭ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="520">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা স্টার হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: জারওয়াল, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৫২০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১১৫ রিয়াল | ৩ বেড: ১৫৫ রিয়াল</p>
+                            <p>৪ বেড: ২০০ রিয়াল | ৫ বেড: ২৫০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20স্টার%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ১৮ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="610">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল বশির হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: কুদাই, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৬১০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১০৫ রিয়াল | ৩ বেড: ১৪৫ রিয়াল</p>
+                            <p>৪ বেড: ১৮৫ রিয়াল | ৫ বেড: ২৩৫ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20বশির%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ১৯ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="680">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef0?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">সাফা টাওয়ার</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: শূশিয়াহ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৬৮০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১০০ রিয়াল | ৩ বেড: ১৩৫ রিয়াল</p>
+                            <p>৪ বেড: ১৭৫ রিয়াল | ৫ বেড: ২২০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=সাফা%20টাওয়ার" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ২০ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="780">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মারওয়া প্লাজা</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: মিনার রোড সংলগ্ন, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৭৮০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ৯৫ রিয়াল | ৩ বেড: ১২৫ রিয়াল</p>
+                            <p>৪ বেড: ১৬০ রিয়াল | ৫ বেড: ২০০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মারওয়া%20প্লাজা" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ২১ থেকে ৫০ (স্বল্প দূরত্বের ব্যবধানে ধারাবাহিক সেট) -->
+            <!-- হোটেল ২১ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="110">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">দারো ইব্রাহিম হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: ইব্রাহিম খলিল, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">১১০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ২৮০ রিয়াল | ৩ বেড: ৩৬০ রিয়াল</p>
+                            <p>৪ বেড: ৪৫০ রিয়াল | ৫ বেড: ৫৫০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=দারো%20ইব্রাহিম%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ২২ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="140">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা রয়্যাল ভিউ</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: জাবাল উমর, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">১৪০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ২৬০ রিয়াল | ৩ বেড: ৩৪০ রিয়াল</p>
+                            <p>৪ বেড: ৪২০ রিয়াল | ৫ বেড: ৫১০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20রয়্যাল%20ভিউ" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ২৩ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="190">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল মানাসিক হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: মাসাফালা, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">১৯০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ২০০ রিয়াল | ৩ বেড: ২৬০ রিয়াল</p>
+                            <p>৪ বেড: ৩৩০ রিয়াল | ৫ বেড: ৪১৫ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20মানাসিক%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ২৪ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="250">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা গার্ডেন</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: আজিয়াদ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">২৫০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৭৫ রিয়াল | ৩ বেড: ২২৫ রিয়াল</p>
+                            <p>৪ বেড: ২৮৫ রিয়াল | ৫ বেড: ৩৬০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20গার্ডেন" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ২৫ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="320">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল সাবাহ হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: গাজ্জা স্কয়ার, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৩২০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৫০ রিয়াল | ৩ বেড: ২০০ রিয়াল</p>
+                            <p>৪ বেড: ২৫০ রিয়াল | ৫ বেড: ৩২০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20সাবাহ%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ২৬ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="370">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">হোটেল মক্কা অরিয়েন্ট</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: আল উতাইবিয়াহ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৩৭০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৪৫ রিয়াল | ৩ বেড: ১৯০ রিয়াল</p>
+                            <p>৪ বেড: ২৪৫ রিয়াল | ৫ বেড: ৩১০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=হোটেল%20মক্কা%20অরিয়েন্ট" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ২৭ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="440">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল ফুরকান প্যালেস</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: জারওয়াল, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৪৪০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৩০ রিয়াল | ৩ বেড: ১৭৫ রিয়াল</p>
+                            <p>৪ বেড: ২২৫ রিয়াল | ৫ বেড: ২৮৫ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20ফুরকান%20প্যালেস" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ২৮ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="510">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা মারওয়া সু্যট</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: কুদাই রোড, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৫১০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১২০ রিয়াল | ৩ বেড: ১৬০ রিয়াল</p>
+                            <p>৪ বেড: ২১০ রিয়াল | ৫ বেড: ২৬৫ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20মারওয়া%20সু্যট" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ২৯ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="590">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef0?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল তাওয়াব হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: শূশিয়াহ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৫৯০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১১০ রিয়াল | ৩ বেড: ১৫০ রিয়াল</p>
+                            <p>৪ বেড: ১৯৫ রিয়াল | ৫ বেড: ২৪৫ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20তাওয়াব%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৩০ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="670">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা রিজেন্সি</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: রুহ আল বাখশ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৬৭০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১০০ রিয়াল | ৩ বেড: ১৪০ রিয়াল</p>
+                            <p>৪ বেড: ১৮০ রিয়াল | ৫ বেড: ২৩০০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20রিজেন্সি" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৩১ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="130">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল হারামেইন প্লাজা</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: ইব্রাহিম খলিল, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">১৩০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ২৭০ রিয়াল | ৩ বেড: ৩৫০ রিয়াল</p>
+                            <p>৪ বেড: ৪৪০ রিয়াল | ৫ বেড: ৫৪০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20হারামেইন%20প্লাজা" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৩২ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="210">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা ভিউ টাওয়ার</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: জাবাল উমর, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">২১০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৯০ রিয়াল | ৩ বেড: ২৫০ রিয়াল</p>
+                            <p>৪ বেড: ৩১০ রিয়াল | ৫ বেড: ৩৯০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20ভিউ%20টাওয়ার" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৩৩ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="280">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল খায়ের হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: মাসাফালা, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">২৮০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৬৫ রিয়াল | ৩ বেড: ২২০ রিয়াল</p>
+                            <p>৪ বেড: ২৮০ রিয়াল | ৫ বেড: ৩৫০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20খায়ের%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৩৪ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="340">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা রয়্যাল প্যালেস</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: আজিয়াদ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৩৪০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৪৫ রিয়াল | ৩ বেড: ১৯৫ রিয়াল</p>
+                            <p>৪ বেড: ২৫০ রিয়াল | ৫ বেড: ৩১৫ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20রয়্যাল%20প্যালেস" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৩৫ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="410">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল মদিনা সু্যট</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: গাজ্জা, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৪১০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৩৫ রিয়াল | ৩ বেড: ১৮০ রিয়াল</p>
+                            <p>৪ বেড: ২৩৫ রিয়াল | ৫ বেড: ২৯৫ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20মদিনা%20সু্যট" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৩৬ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="480">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">হোটেল আল বারাকাহ</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: আল উতাইবিয়াহ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৪৮০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১২০ রিয়াল | ৩ বেড: ১৬৫ রিয়াল</p>
+                            <p>৪ বেড: ২১০ রিয়াল | ৫ বেড: ২৭০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=হোটেল%20আল%20বারাকাহ" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৩৭ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="540">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা ডায়মন্ড</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: জারওয়াল, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৫৪০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১১০ রিয়াল | ৩ বেড: ১৫০ রিয়াল</p>
+                            <p>৪ বেড: ১৯৫ রিয়াল | ৫ বেড: ২৪০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20ডায়মন্ড" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৩৮ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="630">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল সলাম হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: কুদাই, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৬৩০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১০০ রিয়াল | ৩ বেড: ১৪০ রিয়াল</p>
+                            <p>৪ বেড: ১৮০ রিয়াল | ৫ বেড: ২৩০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20সলাম%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৩৯ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="720">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef0?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা পার্ল রেসিডেন্স</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: শূশিয়াহ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৭২০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ৯০ রিয়াল | ৩ বেড: ১৩০ রিয়াল</p>
+                            <p>৪ বেড: ১৭০ রিয়াল | ৫ বেড: ২১০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20পার্ল%20রেসিডেন্স" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৪০ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="820">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল জাজিরা হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: রুহ আল বাখশ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৮২০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ৮৫ রিয়াল | ৩ বেড: ১২০ রিয়াল</p>
+                            <p>৪ বেড: ১৬০ রিয়াল | ৫ বেড: ১৯৯ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20জাজিরা%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৪১ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="95">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা হারমনি</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: ইব্রাহিম খলিল, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৯৫ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ৩২০ রিয়াল | ৩ বেড: ৪১০ রিয়াল</p>
+                            <p>৪ বেড: ৫২০ রিয়াল | ৫ বেড: ৬৫০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20হারমনি" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৪২ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="170">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল নূর গ্র্যান্ড</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: জাবাল উমর, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">১৭০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ২১০ রিয়াল | ৩ বেড: ২৮০ রিয়াল</p>
+                            <p>৪ বেড: ৩৬০ রিয়াল | ৫ বেড: ৪৫০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20নূর%20গ্র্যান্ড" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৪৩ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="230">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা ইমপেসিয়াল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: মাসাফালা, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">২৩০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৮০ রিয়াল | ৩ বেড: ২৪০ রিয়াল</p>
+                            <p>৪ বেড: ৩১০ রিয়াল | ৫ বেড: ৩৯০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20ইমপেসিয়াল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৪৪ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="290">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল রায়ান হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: আজিয়াদ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">২৯০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৬০ রিয়াল | ৩ বেড: ২১০ রিয়াল</p>
+                            <p>৪ বেড: ২৭৫ রিয়াল | ৫ বেড: ৩৫০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20রায়ান%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৪৫ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="360">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা গোল্ডেন টাওয়ার</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: গাজ্জা, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৩৬০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১৪০ রিয়াল | ৩ বেড: ১৮৫ রিয়াল</p>
+                            <p>৪ বেড: ২৪০ রিয়াল | ৫ বেড: ৩০৫ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20গোল্ডেন%20টাওয়ার" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৪৬ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="430">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল হিজাজ হোটেল</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: আল উতাইবিয়াহ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৪৩০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১২৫ রিয়াল | ৩ বেড: ১৭০ রিয়াল</p>
+                            <p>৪ বেড: ২২০ রিয়াল | ৫ বেড: ২৮০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20হিজাজ%20হোটেল" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৪৭ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="490">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা গ্র্যান্ড প্যালেস</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: জারওয়াল, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৪৯০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১১৫ রিয়াল | ৩ বেড: ১৬০ রিয়াল</p>
+                            <p>৪ বেড: ২০৫ রিয়াল | ৫ বেড: ২৬০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20গ্র্যান্ড%20প্যালেস" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৪৮ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="570">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল বারাকাহ সু্যট</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: কুদাই, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৫৭০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ১০৫ রিয়াল | ৩ বেড: ১৪৫ রিয়াল</p>
+                            <p>৪ বেড: ১৯০ রিয়াল | ৫ বেড: ২৪০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20বারাকাহ%20সু্যট" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৪৯ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="650">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef0?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">মক্কা ভিউ রেসিডেন্স</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: শূশিয়াহ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৬৫০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ৯৫ রিয়াল | ৩ বেড: ১৩৫ রিয়াল</p>
+                            <p>৪ বেড: ১৭৫ রিয়াল | ৫ বেড: ২২০ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=মক্কা%20ভিউ%20রেসিডেন্স" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+                </div>
+            </div>
+
+            <!-- হোটেল ৫০ -->
+            <div class="hotel-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between" data-distance="750">
+                <div>
+                    <div class="relative h-56 bg-gray-200"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="হোটেল ছবি" class="w-full h-full object-cover"></div>
+                    <div class="p-5">
+                        <h2 class="text-xl font-bold text-gray-900 mb-1">আল মাক্কী প্লাজা</h2>
+                        <p class="text-sm text-gray-600 mb-2">📍 ঠিকানা: রুহ আল বাখশ, মক্কা</p>
+                        <div class="bg-amber-50 border border-amber-200 text-amber-900 px-3 py-1.5 rounded-lg text-sm font-semibold mb-3 flex items-center gap-2">
+                            <span>🚶‍♂️ হারাম শরীফ থেকে দূরত্ব:</span> <span class="text-emerald-700 font-bold">৭৫০ মিটার</span>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg text-sm mb-4 border border-emerald-100 space-y-1">
+                            <p class="font-semibold text-emerald-800 mb-1">রুমের সাইজ ও ভাড়া:</p>
+                            <p>২ বেড: ৯০ রিয়াল | ৩ বেড: ১২৫ রিয়াল</p>
+                            <p>৪ বেড: ১৬৫ রিয়াল | ৫ বেড: ২০৫ রিয়াল</p>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-4 flex justify-between bg-gray-50 p-2 rounded">
+                            <span>🕒 চেক-ইন: দুপুর ২:০০ টা</span> <span>🕛 চেক-আউট: দুপুর ১২:০০ টা</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <a href="https://wa.me/966550283243?text=আল%20মাক্কী%20প্লাজা" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition duration-200 shadow">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
                 </div>
             </div>
 
